@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../pages/home/navbar/Navbar';
-import Home from '../pages/home/home/Home';
+
+import { Outlet } from 'react-router-dom';
 
 
 const Main = () => {
@@ -8,7 +9,8 @@ const Main = () => {
         <div>
             
            <Navbar></Navbar>
-           <Home></Home>
+           <Outlet></Outlet>
+         
         </div>
     );
 };
