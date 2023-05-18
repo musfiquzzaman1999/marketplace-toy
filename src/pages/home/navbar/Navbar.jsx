@@ -1,12 +1,26 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Active from '../Active/Active';
+import { AuthContex } from '../../provider/AuthProvider';
 
 
 
 
 
 const Navbar = () => {
+  const {user,logOut} = useContext(AuthContex)
+  console.log(user)
+  // recive user and logout from authcontex
+ 
+    const handelLogout=()=>{
+        logOut()
+        .then(() => {
+          // Sign-out successful.
+        }).catch((error) => {
+          // An error happened.
+        });
+        
+    }
   
     return (
         <div >
@@ -40,18 +54,24 @@ const Navbar = () => {
   <div className="navbar-end" >
     {/* using ternary operator data-tip={user.displayName} */}
        
-         <label className=" avatar tooltip tooltip-bottom mr-4"  >
+    {
+        user && <label className=" avatar tooltip tooltip-bottom mr-4" data-tip={user.displayName} >
         <div className="w-10 rounded-full " >
-            <img src="" />
+            <img src={user.photoURL} />
         </div>
     </label>
+      }
       
     
     
     
     
   
-      <Link to='/login' ><a className="btn bg-rose-600">Login</a></Link>
+      {
+      user ?<Link ><a className="btn" onClick={handelLogout}>Logout</a></Link>:
+  
+      <Link to='/login' ><a className="btn">Login</a></Link>
+    }
     
   </div>
   

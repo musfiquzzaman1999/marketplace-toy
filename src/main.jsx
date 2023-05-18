@@ -12,6 +12,9 @@ import Main from './Layout/Main.jsx';
 
 import Home from './pages/home/home/Home.jsx';
 import Login from './pages/login/login.jsx';
+import AuthProvider from './pages/provider/AuthProvider.jsx';
+import Ragister from './pages/login/Ragister.jsx';
+
 
 
 
@@ -30,7 +33,10 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login />,
       },
-     
+      {
+        path: "/ragister",
+        element: <Ragister />,
+      },
       
     ],
   },
@@ -38,6 +44,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   <RouterProvider router={router} />
+  <AuthProvider> <RouterProvider router={router} /></AuthProvider>
   </React.StrictMode>,
 )
