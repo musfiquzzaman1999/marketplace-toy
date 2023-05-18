@@ -15,6 +15,7 @@ import Login from './pages/login/login.jsx';
 import AuthProvider from './pages/provider/AuthProvider.jsx';
 import Ragister from './pages/login/Ragister.jsx';
 import ToysDetails from './pages/toysCategory/ToysDetails.jsx';
+import AllToys from './pages/allToys/AllToys.jsx';
 
 
 
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
         path: "/toys/:id",
         element:<ToysDetails></ToysDetails>,
         loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
+      },
+      {
+        path: "/alltoys",
+        element:<AllToys></AllToys>,
+       
       },
     ],
   },
