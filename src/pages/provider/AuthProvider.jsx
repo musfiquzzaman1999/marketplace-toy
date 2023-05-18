@@ -9,21 +9,21 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 const AuthProvider = ({children}) => {
-    // const [chefs, setChefs] = useState([]);
+    const [toys, setToys] = useState([]);
     const [loading,setLoading]=useState(true)
     // const [error,setError] = useState('');
     const [user,setUser]=useState(null);
 // chefs data fetch
-    // useEffect(() => {
-    //     fetch('https://chef-recipe-hunter-server-musfiquzzaman1999.vercel.app/chefs')
-    //     .then(res => res.json())
-    //     .then(data => {
-    //         setChefs(data);
-    //     })
-    //     .catch(error => {
-    //         console.log("Error fetching chefs: ", error);
-    //     });
-    // }, []);
+    useEffect(() => {
+        fetch('http://localhost:5000/toys')
+        .then(res => res.json())
+        .then(data => {
+            setToys(data);
+        })
+        .catch(error => {
+            console.log("Error fetching toys: ", error);
+        });
+    }, []);
     // create user using firebase
     const createUser =(email,password)=>{
         setLoading(true)
@@ -59,7 +59,7 @@ const AuthProvider = ({children}) => {
     
   
 
-    const authinfo ={createUser,signIn,logOut,loading,user,googleSignIn}
+    const authinfo ={toys,createUser,signIn,logOut,loading,user,googleSignIn}
     return (
         <AuthContex.Provider value={authinfo}>
             {children}
