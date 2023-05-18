@@ -38,7 +38,7 @@ const Navbar = () => {
       <Active to='/recipes'> <li><a>New Recipes</a></li></Active>
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-4xl font-bold ">Plateful</a>
+    <a className="btn btn-ghost normal-case md:text-4xl text-2xl font-bold">Safari Squad</a>
   </div>
   <div className="navbar-center hidden lg:flex ">
     <ul className="menu menu-horizontal px-1">

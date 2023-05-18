@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 import { AuthContex } from '../provider/AuthProvider';
 
 const Login = () => {
-  const { signIn, googleSignIn, githubSignIn, user } = useContext(AuthContex);
+  const { signIn, googleSignIn,  user } = useContext(AuthContex);
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
@@ -49,21 +49,7 @@ const Login = () => {
       });
   };
 
-  const handleGithub = () => {
-    githubSignIn()
-      .then((result) => {
-        const credential = GithubAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
-        const user = result.user;
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        const email = error.customData.email;
-        const credential = GithubAuthProvider.credentialFromError(error);
-      });
-  };
-
+ 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <motion.div
@@ -125,14 +111,7 @@ const Login = () => {
             Sign in with Social Account
           </h3>
           <div className="flex justify-center">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={handleGithub}
-              className="text-gray-700 mx-2 hover:text-gray-900"
-            >
-              <FaGithub className="text-4xl" />
-            </motion.button>
+            
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
