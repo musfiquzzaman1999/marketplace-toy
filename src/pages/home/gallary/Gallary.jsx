@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import 'animate.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Gallery = () => {
   const [animateIndex, setAnimateIndex] = useState(1);
 
   useEffect(() => {
+    AOS.init();
+
     const interval = setInterval(() => {
       setAnimateIndex((prevIndex) => (prevIndex === 6 ? 1 : prevIndex + 1));
     }, 3000);
@@ -23,6 +27,8 @@ const Gallery = () => {
               className={`w-1/2 p-1 md:p-2 animate__animated ${
                 animateIndex === 1 ? 'animate__flipInX' : ''
               }`}
+              data-aos="fade"
+              data-aos-duration="1000"
             >
               <img
                 alt="gallery"
@@ -34,6 +40,8 @@ const Gallery = () => {
               className={`w-1/2 p-1 md:p-2 animate__animated ${
                 animateIndex === 2 ? 'animate__flipInY' : ''
               }`}
+              data-aos="fade"
+              data-aos-duration="1000"
             >
               <img
                 alt="gallery"
@@ -45,6 +53,8 @@ const Gallery = () => {
               className={`w-full p-1 md:p-2 animate__animated ${
                 animateIndex === 3 ? 'animate__zoomIn' : ''
               }`}
+              data-aos="fade"
+              data-aos-duration="1000"
             >
               <img
                 alt="gallery"
@@ -58,6 +68,8 @@ const Gallery = () => {
               className={`w-full p-1 md:p-2 animate__animated ${
                 animateIndex === 4 ? 'animate__fadeInLeft' : ''
               }`}
+              data-aos="fade"
+              data-aos-duration="1000"
             >
               <img
                 alt="gallery"
@@ -69,6 +81,8 @@ const Gallery = () => {
               className={`w-1/2 p-1 md:p-2 animate__animated ${
                 animateIndex === 5 ? 'animate__fadeInRight' : ''
               }`}
+              data-aos="fade"
+              data-aos-duration="1000"
             >
               <img
                 alt="gallery"
@@ -80,6 +94,8 @@ const Gallery = () => {
               className={`w-1/2 p-1 md:p-2 animate__animated ${
                 animateIndex === 6 ? 'animate__heartBeat' : ''
               }`}
+              data-aos="fade"
+              data-aos-duration="1000"
             >
               <img
                 alt="gallery"

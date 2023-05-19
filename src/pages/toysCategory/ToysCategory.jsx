@@ -40,7 +40,7 @@ const ToysCategory = () => {
 
   return (
     <div>
-      <h2 className='text-center font-bold text-5xl text-rose-600 mt-16'>Toy's Collections</h2>
+      <h2 className='text-center font-bold text-5xl text-rose-600 mt-16'  data-aos="fade">Toy's Collections</h2>
 
       {/* Category filter */}
       <div className='text-center font-semibold text-xl text-black mt-6 mb-16'>
