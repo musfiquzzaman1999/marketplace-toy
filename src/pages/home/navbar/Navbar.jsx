@@ -35,7 +35,8 @@ const Navbar = () => {
       
       <Active to='/blog'> <li><a>Blog</a></li></Active>
    
-      <Active to='/recipes'> <li><a>New Recipes</a></li></Active>
+      <Active to='/alltoys'> <li><a>All Toys</a></li></Active>
+      <Active to='/addtoys'> <li><a>Add Toys</a></li></Active>
       </ul>
     </div>
     <a className="btn btn-ghost normal-case md:text-4xl text-2xl font-bold">Safari Squad</a>
@@ -46,7 +47,9 @@ const Navbar = () => {
       
      <Active to='/blog'> <li className='font-bold text-xl'><a>Blog</a></li></Active>
    
-     <Active to='/recipes'> <li className='font-bold text-xl'><a>New Recipes</a></li></Active>
+     <Active to='/alltoys'> <li className='font-bold text-xl'><a>All Toys</a></li></Active>
+     <Active to='/addtoys'> <li className='font-bold text-xl'><a>Add Toys</a></li></Active>
+     <Active to='/mytoys'> <li className='font-bold text-xl'><a>My Toys</a></li></Active>
     </ul>
   </div>
  

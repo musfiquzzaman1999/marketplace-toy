@@ -16,6 +16,8 @@ import AuthProvider from './pages/provider/AuthProvider.jsx';
 import Ragister from './pages/login/Ragister.jsx';
 import ToysDetails from './pages/toysCategory/ToysDetails.jsx';
 import AllToys from './pages/allToys/AllToys.jsx';
+import AddToy from './pages/addtoys/AddToy.jsx';
+import MyToys from './pages/myToys/MyToys.jsx';
 
 
 
@@ -47,6 +49,16 @@ const router = createBrowserRouter([
       {
         path: "/alltoys",
         element:<AllToys></AllToys>,
+       
+      },
+      {
+        path: "/addtoys",
+        element:<AddToy></AddToy>,
+       
+      },
+      {
+        path: "/mytoys",
+        element:<MyToys></MyToys>,
        
       },
     ],
