@@ -60,10 +60,10 @@ const UpdateToy = () => {
 
     return (
         <div>
-             <div>
-      <div className="flex justify-center items-center h-screen mt-32 mb-32">
-        <form className="bg-white rounded-lg shadow-lg p-6" onSubmit={handleUpdateToy}>
-          <h2 className="text-2xl font-bold mb-6">Add a Toy</h2>
+          <div className="container mx-auto px-4">
+      <div className="flex justify-center items-center min-h-screen">
+        <form className="w-full md:w-3/4 lg:w-1/2 xl:w-1/3 bg-white rounded-lg shadow-lg p-6" onSubmit={handleUpdateToy}>
+          <h2 className="text-2xl font-bold mb-6">Update Toys</h2>
           <div className="mb-4">
             <label className="block text-gray-700 font-bold mb-2">Picture URL</label>
             <input

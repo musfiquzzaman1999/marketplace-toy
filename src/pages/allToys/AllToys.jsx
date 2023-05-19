@@ -21,7 +21,7 @@ const AllToys = () => {
   );
 
   return (
-    <div>
+    <div className="px-4 py-8 mb-20">
       <h2 className="text-center font-bold text-5xl text-rose-600 mt-16">All Toys</h2>
 
       {/* Search input */}
@@ -36,27 +36,29 @@ const AllToys = () => {
       </div>
 
       {/* Toy list */}
-      <table className="w-full border-collapse">
+      <table className="w-full border border-gray-300">
         <thead>
           <tr>
-            <th className="px-4 py-2 font-semibold">Seller</th>
-            <th className="px-4 py-2 font-semibold">Toy Name</th>
-            <th className="px-4 py-2 font-semibold">Sub-category</th>
-            <th className="px-4 py-2 font-semibold">Price</th>
-            <th className="px-4 py-2 font-semibold">Available Quantity</th>
-            <th className="px-4 py-2 font-semibold"></th>
+            <th className="px-4 py-2 font-semibold border-b border-r">Seller</th>
+            <th className="px-4 py-2 font-semibold border-b border-r">Toy Name</th>
+            <th className="px-4 py-2 font-semibold border-b border-r">Sub-category</th>
+            <th className="px-4 py-2 font-semibold border-b border-r">Price</th>
+            <th className="px-4 py-2 font-semibold border-b border-r">Available Quantity</th>
+            <th className="px-4 py-2 font-semibold border-b"></th>
           </tr>
         </thead>
         <tbody>
           {filteredToys.map(toy => (
             <tr key={toy._id}>
-              <td className="px-4 py-2">{toy.sellerName}</td>
-              <td className="px-4 py-2">{toy.name}</td>
-              <td className="px-4 py-2">{toy.subCategory}</td>
-              <td className="px-4 py-2">{toy.price}</td>
-              <td className="px-4 py-2">{toy.quantityAvailable}</td>
-              <td className="px-4 py-2">
-               <Link to={`/toys/${toy._id}`}> <button className="text-blue-500">View Details</button></Link>
+              <td className="px-4 py-2 border-b border-r">{toy.sellerName}</td>
+              <td className="px-4 py-2 border-b border-r">{toy.name}</td>
+              <td className="px-4 py-2 border-b border-r">{toy.subCategory}</td>
+              <td className="px-4 py-2 border-b border-r">{toy.price}</td>
+              <td className="px-4 py-2 border-b border-r">{toy.quantityAvailable}</td>
+              <td className="px-4 py-2 border-b">
+                <Link to={`/toys/${toy._id}`}>
+                  <button className="text-blue-500">View Details</button>
+                </Link>
               </td>
             </tr>
           ))}
