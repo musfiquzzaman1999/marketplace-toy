@@ -4,12 +4,15 @@ import Gallary from '../gallary/gallary';
 import ToysCategory from '../../toysCategory/toysCategory';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import useTitle from '../../../hooks/useTitle';
+
 
 const Home = () => {
+  useTitle('Safari Squad')
   useEffect(() => {
     AOS.init();
   }, []);
-
+  
   return (
     <div>
       <Banner></Banner>

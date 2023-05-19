@@ -4,9 +4,11 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import { AuthContex } from '../provider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
   const { signIn, googleSignIn,  user } = useContext(AuthContex);
+  useTitle('Login')
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const location = useLocation();

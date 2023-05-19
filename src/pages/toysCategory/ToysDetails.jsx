@@ -6,6 +6,7 @@ import { FaRegStar, FaStar } from 'react-icons/fa';
 
 const ToysDetails = () => {
   const toyData = useLoaderData();
+  useTitle('Details')
   const { name, pictureUrl, rating, price, description, _id, sellerEmail, sellerName, quantityAvailable } = toyData;
 
   return (

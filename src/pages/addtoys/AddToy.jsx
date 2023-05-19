@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import { AuthContex } from '../provider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 
 const AddToy = () => {
   const { user } = useContext(AuthContex);
+  useTitle('Add Toy')
 
   const handleFormSubmit = (event) => {
     event.preventDefault();

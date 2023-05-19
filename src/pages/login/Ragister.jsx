@@ -3,10 +3,12 @@ import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { AuthContex } from '../provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
+import useTitle from '../../hooks/useTitle';
 
 const Register = () => {
   const { createUser, user } = useContext(AuthContex);
   const [error, setError] = useState('');
+  useTitle('Ragister')
 
   const navigate = useNavigate();
   const location = useLocation();

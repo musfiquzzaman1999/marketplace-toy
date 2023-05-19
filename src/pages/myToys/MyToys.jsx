@@ -2,11 +2,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContex } from '../provider/AuthProvider';
 import { Link } from 'react-router-dom';
 import DeleteToy from '../deleteToy/DeleteToy';
+import useTitle from '../../hooks/useTitle';
 
 const MyToys = () => {
   const { user } = useContext(AuthContex);
   const [myToys, setMyToys] = useState([]);
   const [sortOrder, setSortOrder] = useState('asc');
+  useTitle('My Toy')
 
   useEffect(() => {
     fetch(`http://localhost:5000/toysMail/${user?.email}?sort=${sortOrder}`)
