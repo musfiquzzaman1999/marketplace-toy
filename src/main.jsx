@@ -18,6 +18,7 @@ import ToysDetails from './pages/toysCategory/ToysDetails.jsx';
 import AllToys from './pages/allToys/AllToys.jsx';
 import AddToy from './pages/addtoys/AddToy.jsx';
 import MyToys from './pages/myToys/MyToys.jsx';
+import UpdateToy from './pages/UpdateToy/UpdateToy.jsx';
 
 
 
@@ -59,6 +60,12 @@ const router = createBrowserRouter([
       {
         path: "/mytoys",
         element:<MyToys></MyToys>,
+       
+      },
+      {
+        path: "/updateToy/:id",
+        element:<UpdateToy></UpdateToy>,
+        loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
        
       },
     ],
