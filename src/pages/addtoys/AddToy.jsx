@@ -7,7 +7,7 @@ const AddToy = () => {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-
+  
     const form = event.target;
     const pictureUrl = form.pictureUrl.value;
     const name = form.name.value;
@@ -18,8 +18,7 @@ const AddToy = () => {
     const rating = form.rating.value;
     const quantityAvailable = form.quantityAvailable.value;
     const description = form.description.value;
-
-    // Create a new toy object
+  
     const newToy = {
       pictureUrl,
       name,
@@ -31,17 +30,7 @@ const AddToy = () => {
       quantityAvailable,
       description
     };
-    console.log(pictureUrl,
-        name,
-        sellerName,
-        sellerEmail,
-        subCategory,
-        price,
-        rating,
-        quantityAvailable,
-        description)
-
-    // Make a POST request to the server to add the toy
+  
     fetch('http://localhost:5000/toys', {
       method: 'POST',
       headers: {
@@ -52,13 +41,16 @@ const AddToy = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        // Redirect to the All Toys page or show a success message
-       
+        // Update the local state or fetch the updated toys list
+        // depending on how your application is structured
       })
       .catch((error) => {
         console.log(error);
         // Show an error message
       });
+  
+    // Clear the form fields
+    form.reset();
   };
 
   return (
