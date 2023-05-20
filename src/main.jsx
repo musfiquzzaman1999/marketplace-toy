@@ -20,6 +20,7 @@ import AddToy from './pages/addtoys/AddToy.jsx';
 import MyToys from './pages/myToys/MyToys.jsx';
 import UpdateToy from './pages/UpdateToy/UpdateToy.jsx';
 import PrivateRoute from './pages/login/PrivateRoute.jsx';
+import Error from './pages/errorpage/Error.jsx';
 
 
 
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
