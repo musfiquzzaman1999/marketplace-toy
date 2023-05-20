@@ -7,6 +7,7 @@ import useTitle from '../../hooks/useTitle';
 
 const ToysDetails = () => {
   const toyData = useLoaderData();
+  console.log(toyData)
   useTitle('Details')
   const { name, pictureUrl, rating, price, description, _id, sellerEmail, sellerName, quantityAvailable } = toyData;
 

@@ -15,13 +15,14 @@ import Login from './pages/login/login.jsx';
 import AuthProvider from './pages/provider/AuthProvider.jsx';
 import Ragister from './pages/login/Ragister.jsx';
 import ToysDetails from './pages/toysCategory/ToysDetails.jsx';
-import AllToys from './pages/allToys/AllToys.jsx';
+
 import AddToy from './pages/addtoys/AddToy.jsx';
 import MyToys from './pages/myToys/MyToys.jsx';
 import UpdateToy from './pages/UpdateToy/UpdateToy.jsx';
 import PrivateRoute from './pages/login/PrivateRoute.jsx';
 import Error from './pages/errorpage/Error.jsx';
 import Blog from './pages/blog/Blog.jsx';
+import AllToys from './pages/allToys/AllToys.jsx'
 
 
 
