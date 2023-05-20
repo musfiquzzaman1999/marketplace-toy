@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import Rating from 'react-rating';
 import { FaRegStar, FaStar } from 'react-icons/fa';
+import useTitle from '../../hooks/useTitle';
 
 const ToysDetails = () => {
   const toyData = useLoaderData();
