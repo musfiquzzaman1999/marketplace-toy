@@ -49,7 +49,7 @@ const router = createBrowserRouter([
       {
         path: "/toys/:id",
         element:<PrivateRoute><ToysDetails></ToysDetails></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
+        loader:({params})=>fetch(`https://toy-marketplace-server-neon.vercel.app/toys/${params.id}`)
       },
       {
         path: "/alltoys",
@@ -63,13 +63,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/mytoys",
-        element:<MyToys></MyToys>,
+        element:<PrivateRoute><MyToys></MyToys></PrivateRoute>,
        
       },
       {
         path: "/updateToy/:id",
         element:<UpdateToy></UpdateToy>,
-        loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
+        loader:({params})=>fetch(`https://toy-marketplace-server-neon.vercel.app/toys/${params.id}`)
        
       },
       {

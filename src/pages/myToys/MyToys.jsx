@@ -12,7 +12,7 @@ const MyToys = () => {
   useTitle('My Toy');
 
   useEffect(() => {
-    fetch(`http://localhost:5000/toysMail/${user?.email}?sort=${sortOrder}`)
+    fetch(`https://toy-marketplace-server-neon.vercel.app/toysMail/${user?.email}?sort=${sortOrder}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -24,7 +24,7 @@ const MyToys = () => {
     console.log(id);
     const proceed = window.confirm('Are you sure you want to delete?');
     if (proceed) {
-      fetch(`http://localhost:5000/toys/${id}`, {
+      fetch(`https://toy-marketplace-server-neon.vercel.app/toys/${id}`, {
         method: 'DELETE'
       })
         .then((res) => res.json())

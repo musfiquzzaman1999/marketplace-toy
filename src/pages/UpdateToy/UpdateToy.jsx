@@ -43,7 +43,7 @@ const UpdateToy = () => {
             description)
     
         // Make a POST request to the server to add the toy
-        fetch(`http://localhost:5000/updateToy/${updateToys._id}`, {
+        fetch(`https://toy-marketplace-server-neon.vercel.app/updateToy/${updateToys._id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newToy),
@@ -159,7 +159,7 @@ const UpdateToy = () => {
               type="submit"
               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
             >
-              Add Toy
+              Update Toy
             </button>
           </div>
         </form>

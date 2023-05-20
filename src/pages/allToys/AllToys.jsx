@@ -5,14 +5,15 @@ import useTitle from '../../hooks/useTitle';
 const AllToys = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [toysData, setToysData] = useState([]);
+  const [limit, setLimit] = useState(20);
   useTitle('All Toy');
 
   useEffect(() => {
-    fetch('http://localhost:5000/toys/')
+    fetch(`https://toy-marketplace-server-neon.vercel.app/toys/${limit}`)
       .then(response => response.json())
       .then(data => setToysData(data))
       .catch(error => console.error(error));
-  }, []);
+  }, [limit]);
 
   const handleSearchChange = event => {
     setSearchQuery(event.target.value);
@@ -21,6 +22,10 @@ const AllToys = () => {
   const filteredToys = toysData.filter(toy =>
     toy.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  const handleSeeMore = () => {
+    setLimit(prevLimit => prevLimit + 20);
+  };
 
   return (
     <div className="px-4 py-8 mb-20">
@@ -51,7 +56,7 @@ const AllToys = () => {
             </tr>
           </thead>
           <tbody>
-            {filteredToys.slice(0, 20).map(toy => (
+            {filteredToys.map(toy => (
               <tr key={toy._id}>
                 <td className="px-4 py-2 border-b border-r">{toy.sellerName}</td>
                 <td className="px-4 py-2 border-b border-r">{toy.name}</td>
@@ -68,8 +73,20 @@ const AllToys = () => {
           </tbody>
         </table>
       </div>
+
+      {/* See More button */}
+      {filteredToys.length >= limit && (
+        <div className="flex justify-center mt-8">
+          <button
+            className="px-4 py-2 bg-blue-500 text-white rounded-md"
+            onClick={handleSeeMore}
+          >
+            See More
+          </button>
+        </div>
+      )}
     </div>
   );
 };
 
-export default AllToys
+export default AllToys;

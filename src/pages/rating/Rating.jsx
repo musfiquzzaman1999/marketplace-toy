@@ -5,7 +5,7 @@ const Rating= () => {
   const [toys, setToys] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/toys')
+    fetch('https://toy-marketplace-server-neon.vercel.app/toys')
       .then(response => response.json())
       .then(data => {
         // Sort toys based on rating in descending order
