@@ -2,6 +2,7 @@ import React from 'react';
 import { Fade } from 'react-reveal';
 import Wave from 'react-wavify';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import logo from '../../assets/Screenshot_2023-05-20_130424-removebg-preview.png'
 
 const Footer = () => {
   return (
@@ -18,9 +19,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <Fade bottom>
             <div className="text-center md:text-left">
-              <img className="mx-auto w-20" src="/logo.png" alt="Company Logo" data-aos="fade" />
-              <p className="mt-4 text-white text-lg" data-aos="fade">ACME Industries Ltd.</p>
+              <img className="mx-auto w-20" src={logo} alt="Company Logo" data-aos="fade" />
+              <p className="mt-4 text-white text-lg" data-aos="fade">Safari Squad Ltd.</p>
               <p className="text-gray-300 text-sm" data-aos="fade">Providing reliable tech since 1992</p>
+              <p className="mt-4 text-gray-300 text-sm" data-aos="fade">
+                123 Main St, Dhaka, Bangladesh
+                <br />
+                Phone: +8801790-198421
+                <br />
+                Email: musfiquzzaman1999@gmail.com
+              </p>
             </div>
           </Fade>
           <Fade bottom delay={200}>
@@ -46,26 +54,28 @@ const Footer = () => {
             <div>
               <h2 className="text-white font-bold"  data-aos="fade">Follow Us</h2>
               <div className="flex mt-4">
-                <a href="#" className="mr-4 text-gray-300 hover:text-white transition duration-300"  data-aos="fade">
+                <a href="https://www.facebook.com/ToyZoneBD" className="mr-4 text-gray-300 hover:text-white transition duration-300"  data-aos="fade">
                   <FaFacebook size={24} />
                 </a>
-                <a href="#" className="mr-4 text-gray-300 hover:text-white transition duration-300"  data-aos="fade">
+                <a href="https://twitter.com/deepikapadukone?lang=en" className="mr-4 text-gray-300 hover:text-white transition duration-300"  data-aos="fade">
                   <FaTwitter size={24} />
                 </a>
-                <a href="#" className="text-gray-300 hover:text-white transition duration-300"  data-aos="fade">
+                <a href="https://www.instagram.com/toyzone1/" className="text-gray-300 hover:text-white transition duration-300"  data-aos="fade">
                   <FaInstagram size={24} />
                 </a>
               </div>
             </div>
           </Fade>
         </div>
-        <Fade bottom delay={600}>
-          <div className="mt-8 text-center md:text-left" >
-            <p className="text-gray-300"  data-aos="fade">ACME Industries Ltd. &copy; {new Date().getFullYear()}</p>
-            <p className="text-gray-300"  data-aos="fade">Terms of Use | Privacy Policy | Cookie Policy</p>
-          </div>
-        </Fade>
+        
       </div>
+
+      
+      <div className="mt-8 text-center ">
+            <p  className="text-gray-300" >ACME Industries Ltd. &copy; {new Date().getFullYear()}</p>
+            <p className="text-gray-300" >Terms of Use | Privacy Policy | Cookie Policy</p>
+          </div>
+       
     </footer>
   );
 };

@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Active from '../Active/Active';
 import { AuthContex } from '../../provider/AuthProvider';
+import logo from '../../../assets/Screenshot_2023-05-20_130424-removebg-preview.png'
 
 
 
@@ -43,6 +44,7 @@ const Navbar = () => {
       
       </ul>
     </div>
+    <img src={logo} alt="" className='h-12' />
     <a className="btn btn-ghost normal-case md:text-4xl text-2xl font-bold">Safari Squad</a>
   </div>
   <div className="navbar-center hidden lg:flex ">
