@@ -5,7 +5,7 @@ import useTitle from '../../hooks/useTitle';
 const AllToys = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [toysData, setToysData] = useState([]);
-  useTitle('All Toy')
+  useTitle('All Toy');
 
   useEffect(() => {
     fetch('http://localhost:5000/toys/')
@@ -38,34 +38,36 @@ const AllToys = () => {
       </div>
 
       {/* Toy list */}
-      <table className="w-full border border-gray-300">
-        <thead>
-          <tr>
-            <th className="px-4 py-2 font-semibold border-b border-r">Seller</th>
-            <th className="px-4 py-2 font-semibold border-b border-r">Toy Name</th>
-            <th className="px-4 py-2 font-semibold border-b border-r">Sub-category</th>
-            <th className="px-4 py-2 font-semibold border-b border-r">Price</th>
-            <th className="px-4 py-2 font-semibold border-b border-r">Available Quantity</th>
-            <th className="px-4 py-2 font-semibold border-b"></th>
-          </tr>
-        </thead>
-        <tbody>
-  {filteredToys.slice(0, 20).map(toy => (
-    <tr key={toy._id}>
-      <td className="px-4 py-2 border-b border-r">{toy.sellerName}</td>
-      <td className="px-4 py-2 border-b border-r">{toy.name}</td>
-      <td className="px-4 py-2 border-b border-r">{toy.subCategory}</td>
-      <td className="px-4 py-2 border-b border-r">{toy.price}</td>
-      <td className="px-4 py-2 border-b border-r">{toy.quantityAvailable}</td>
-      <td className="px-4 py-2 border-b">
-        <Link to={`/toys/${toy._id}`}>
-          <button className="text-blue-500">View Details</button>
-        </Link>
-      </td>
-    </tr>
-  ))}
-</tbody>
-      </table>
+      <div className="overflow-x-auto">
+        <table className="w-full border border-gray-300">
+          <thead>
+            <tr>
+              <th className="px-4 py-2 font-semibold border-b border-r">Seller</th>
+              <th className="px-4 py-2 font-semibold border-b border-r">Toy Name</th>
+              <th className="px-4 py-2 font-semibold border-b border-r">Sub-category</th>
+              <th className="px-4 py-2 font-semibold border-b border-r">Price</th>
+              <th className="px-4 py-2 font-semibold border-b border-r">Available Quantity</th>
+              <th className="px-4 py-2 font-semibold border-b"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {filteredToys.slice(0, 20).map(toy => (
+              <tr key={toy._id}>
+                <td className="px-4 py-2 border-b border-r">{toy.sellerName}</td>
+                <td className="px-4 py-2 border-b border-r">{toy.name}</td>
+                <td className="px-4 py-2 border-b border-r">{toy.subCategory}</td>
+                <td className="px-4 py-2 border-b border-r">{toy.price}</td>
+                <td className="px-4 py-2 border-b border-r">{toy.quantityAvailable}</td>
+                <td className="px-4 py-2 border-b">
+                  <Link to={`/toys/${toy._id}`}>
+                    <button className="text-blue-500">View Details</button>
+                  </Link>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

@@ -40,7 +40,7 @@ const ToysCategory = () => {
 
   return (
     <div>
-      <h2 className='text-center font-bold text-5xl text-rose-600 mt-16'  data-aos="fade">Toy's Collections</h2>
+      <h2 className='text-center font-bold md:text-5xl lg:text-5xl text-3xl text-rose-600 mt-16'  data-aos="fade">Toy's Collections</h2>
 
       {/* Category filter */}
       <div className='text-center font-semibold text-xl text-black mt-6 mb-16'>
@@ -51,10 +51,10 @@ const ToysCategory = () => {
             ))}
           </TabList>
 
-          <div className='ml-8'>
+          <div className='md:ml-8 lg:ml-8 ml-4'>
             {allCategories.map(category => (
               <TabPanel key={category}>
-                <div className='grid grid-cols-3 gap-5 px-12 ml-10 mb-16'>
+                <div className='grid md:grid-cols-3 lg:grid-cols-3 grid-cols-1 md:gap-5 gap-2 lg:gap-5 md:px-12 lg:px-12 px-0 md:ml-10 lg:ml-10 ml-0 mb-16'>
                   {filteredToys.map(toy => (
                     <ToysCategoryCard key={toy._id} toy={toy} />
                   ))}

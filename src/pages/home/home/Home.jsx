@@ -18,7 +18,7 @@ const Home = () => {
       <Banner></Banner>
       <div>
         <h1
-          className="text-center font-extrabold text-5xl text-rose-600 mt-20"
+          className="text-center font-extrabold md:text-5xl lg:text-5xl text-3xl text-rose-600 md:mt-20 lg:mt-20 mt-8"
           data-aos="fade"
         >
           See Toy's Gallary

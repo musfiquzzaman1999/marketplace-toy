@@ -51,7 +51,7 @@ const ToysCategoryCard = ({ toy }) => {
           </div>
           <div className="card-actions">
             <Link to={`/toys/${_id}`}>
-              <button className="btn bg-rose-600">Buy Now</button>
+              <button className="btn bg-rose-600">View Details</button>
             </Link>
           </div>
         </div>
