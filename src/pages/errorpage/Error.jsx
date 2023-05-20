@@ -1,8 +1,10 @@
 import React from 'react';
 import { Fade, Slide } from 'react-reveal';
 import { Link } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const Error = () => {
+    useTitle('error')
   return (
     <section className="flex items-center h-full p-8 sm:p-16  dark:bg-gray-900 dark:text-gray-100">
       <div className="container flex flex-col items-center justify-center mx-auto space-y-8 text-center max-w-md">
