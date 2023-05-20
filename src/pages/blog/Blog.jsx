@@ -22,7 +22,7 @@ const Blog = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8 text-center">Ans is given bellow</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center">Ans are given bellow</h1>
       {blogData.map((blog, index) => (
         <div key={index} className="bg-white rounded-lg shadow-lg p-6 mb-6">
           <h2 className="text-2xl font-bold mb-4">{blog.question}</h2>
