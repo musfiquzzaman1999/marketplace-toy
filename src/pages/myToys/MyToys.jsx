@@ -56,7 +56,7 @@ const MyToys = () => {
                 <th className="py-2 px-4 border">
                   Price{' '}
                   <button
-                    className="text-blue-500"
+                    className="text-blue-500 text-2xl"
                     onClick={handleSort}
                   >
                     {sortOrder === 'asc' ? '▲' : '▼'}

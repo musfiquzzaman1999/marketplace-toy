@@ -1,10 +1,13 @@
 import React, { useContext, useState } from 'react';
 import { AuthContex } from '../provider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
+import { useNavigate } from 'react-router-dom';
 
 const AddToy = () => {
   const { user } = useContext(AuthContex);
   useTitle('Add Toy')
+
+  // const navigate = useNavigate()
 
   const [isFormValid, setIsFormValid] = useState(false);
 
@@ -47,6 +50,7 @@ const AddToy = () => {
         if(data.insertedId){
           alert('done');
           form.reset();
+          // navigate('/');
       }
       })
       .catch((error) => {

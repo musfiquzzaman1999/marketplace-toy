@@ -5,6 +5,8 @@ import ToysCategory from '../../toysCategory/toysCategory';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import useTitle from '../../../hooks/useTitle';
+import AboutUs from '../../aboutus/AboutUs';
+import Rating from '../../rating/Rating';
 
 
 const Home = () => {
@@ -28,6 +30,8 @@ const Home = () => {
         <Gallary></Gallary>
       </div>
       <ToysCategory></ToysCategory>
+      <AboutUs></AboutUs>
+      <Rating></Rating>
     </div>
   );
 };
