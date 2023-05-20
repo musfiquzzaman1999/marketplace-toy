@@ -70,6 +70,9 @@ const UpdateToy = () => {
               type="text"
               name="pictureUrl"
               className="border border-gray-300 rounded-md px-4 py-2 w-full"
+              required
+              defaultValue={updateToys.pictureUrl}
+              
             />
           </div>
           <div className="mb-4">
@@ -78,6 +81,8 @@ const UpdateToy = () => {
               type="text"
               name="name"
               className="border border-gray-300 rounded-md px-4 py-2 w-full"
+              required
+              defaultValue={updateToys.name}
             />
           </div>
           <div className="mb-4">
@@ -87,6 +92,8 @@ const UpdateToy = () => {
               name="sellerName"
               defaultValue={user ? user.displayName : ''}
               className="border border-gray-300 rounded-md px-4 py-2 w-full"
+              required
+             
             />
           </div>
           <div className="mb-4">
@@ -104,6 +111,8 @@ const UpdateToy = () => {
               type="text"
               name="subCategory"
               className="border border-gray-300 rounded-md px-4 py-2 w-full"
+              required
+              defaultValue={updateToys.subCategory}
             />
           </div>
           <div className="mb-4">
@@ -112,6 +121,8 @@ const UpdateToy = () => {
               type="text"
               name="price"
               className="border border-gray-300 rounded-md px-4 py-2 w-full"
+              required
+              defaultValue={updateToys.price}
             />
           </div>
           <div className="mb-4">
@@ -120,6 +131,8 @@ const UpdateToy = () => {
               type="text"
               name="rating"
               className="border border-gray-300 rounded-md px-4 py-2 w-full"
+              required
+              defaultValue={updateToys.rating}
             />
           </div>
           <div className="mb-4">
@@ -128,6 +141,8 @@ const UpdateToy = () => {
               type="text"
               name="quantityAvailable"
               className="border border-gray-300 rounded-md px-4 py-2 w-full"
+              required
+              defaultValue={updateToys.quantityAvailable}
             />
           </div>
           <div className="mb-4">
@@ -135,6 +150,8 @@ const UpdateToy = () => {
             <textarea
               name="description"
               className="border border-gray-300 rounded-md px-4 py-2 w-full h-32"
+              required
+              defaultValue={updateToys.description}
             ></textarea>
           </div>
           <div className="mb-4">

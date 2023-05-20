@@ -72,4 +72,4 @@ const AllToys = () => {
   );
 };
 
-export default AllToys;
+export default AllToys
