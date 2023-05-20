@@ -19,10 +19,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <Fade bottom>
             <div className="text-center md:text-left">
-              <img className="mx-auto w-20" src={logo} alt="Company Logo" data-aos="fade" />
-              <p className="mt-4 text-white text-lg" data-aos="fade">Safari Squad Ltd.</p>
-              <p className="text-gray-300 text-sm" data-aos="fade">Providing reliable tech since 1992</p>
-              <p className="mt-4 text-gray-300 text-sm" data-aos="fade">
+              <img className="mx-auto w-20" src={logo} alt="Company Logo" />
+              <p className="mt-4 text-white text-lg">Safari Squad Ltd.</p>
+              <p className="text-gray-300 text-sm">Providing reliable tech since 1992</p>
+              <p className="mt-4 text-gray-300 text-sm">
                 123 Main St, Dhaka, Bangladesh
                 <br />
                 Phone: +8801790-198421
@@ -33,34 +33,34 @@ const Footer = () => {
           </Fade>
           <Fade bottom delay={200}>
             <div>
-              <h2 className="text-white font-bold" data-aos="fade">Services</h2>
+              <h2 className="text-white font-bold">Services</h2>
               <ul className="mt-4">
                 <li className="mt-2">
-                  <a href="#" className="text-gray-300 hover:text-white transition duration-300" data-aos="fade">Branding</a>
+                  <a href="#" className="text-gray-300 hover:text-white transition duration-300">Branding</a>
                 </li>
                 <li className="mt-2">
-                  <a href="#" className="text-gray-300 hover:text-white transition duration-300"  data-aos="fade">Design</a>
+                  <a href="#" className="text-gray-300 hover:text-white transition duration-300">Design</a>
                 </li>
                 <li className="mt-2">
-                  <a href="#" className="text-gray-300 hover:text-white transition duration-300"  data-aos="fade">Marketing</a>
+                  <a href="#" className="text-gray-300 hover:text-white transition duration-300">Marketing</a>
                 </li>
                 <li className="mt-2">
-                  <a href="#" className="text-gray-300 hover:text-white transition duration-300"  data-aos="fade">Advertisement</a>
+                  <a href="#" className="text-gray-300 hover:text-white transition duration-300">Advertisement</a>
                 </li>
               </ul>
             </div>
           </Fade>
           <Fade bottom delay={400}>
             <div>
-              <h2 className="text-white font-bold"  data-aos="fade">Follow Us</h2>
+              <h2 className="text-white font-bold">Follow Us</h2>
               <div className="flex mt-4">
-                <a href="https://www.facebook.com/ToyZoneBD" className="mr-4 text-gray-300 hover:text-white transition duration-300"  data-aos="fade">
+                <a href="https://www.facebook.com/ToyZoneBD" className="mr-4 text-gray-300 hover:text-white transition duration-300">
                   <FaFacebook size={24} />
                 </a>
-                <a href="https://twitter.com/deepikapadukone?lang=en" className="mr-4 text-gray-300 hover:text-white transition duration-300"  data-aos="fade">
+                <a href="https://twitter.com/deepikapadukone?lang=en" className="mr-4 text-gray-300 hover:text-white transition duration-300">
                   <FaTwitter size={24} />
                 </a>
-                <a href="https://www.instagram.com/toyzone1/" className="text-gray-300 hover:text-white transition duration-300"  data-aos="fade">
+                <a href="https://www.instagram.com/toyzone1/" className="text-gray-300 hover:text-white transition duration-300">
                   <FaInstagram size={24} />
                 </a>
               </div>
@@ -72,10 +72,9 @@ const Footer = () => {
 
       
       <div className="mt-8 text-center ">
-            <p  className="text-gray-300" >ACME Industries Ltd. &copy; {new Date().getFullYear()}</p>
-            <p className="text-gray-300" >Terms of Use | Privacy Policy | Cookie Policy</p>
-          </div>
-       
+        <p className="text-gray-300">ACME Industries Ltd. &copy; {new Date().getFullYear()}</p>
+        <p className="text-gray-300">Terms of Use | Privacy Policy | Cookie Policy</p>
+      </div>
     </footer>
   );
 };
