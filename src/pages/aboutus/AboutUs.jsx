@@ -12,7 +12,7 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <section className="about-section  py-12">
+    <section className="about-section  py-12 ">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row">
           <div className="lg:w-1/2" data-aos="fade-right">

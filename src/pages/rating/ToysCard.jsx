@@ -12,7 +12,7 @@ const ToyCard = ({ toy }) => {
 
   return (
     <motion.div
-      className="card w-96 glass"
+      className="card md:w-96 lg:w-96 w-80   glass"
       data-aos="fade-up"
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.3 }}

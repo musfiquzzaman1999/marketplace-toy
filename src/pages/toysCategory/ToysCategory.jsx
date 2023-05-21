@@ -54,7 +54,7 @@ const ToysCategory = () => {
           <div className='md:ml-8 lg:ml-8 ml-4'>
             {allCategories.map(category => (
               <TabPanel key={category}>
-                <div className='grid md:grid-cols-3 lg:grid-cols-3 grid-cols-1 md:gap-5 gap-2 lg:gap-5 md:px-12 lg:px-12 px-0 md:ml-10 lg:ml-10 ml-0 mb-16'>
+                <div className='grid md:grid-cols-3 lg:grid-cols-3 grid-cols-1 md:gap-5 gap-2 lg:gap-5 md:px-12 lg:px-12 px-0 md:ml-10 lg:ml-10 ml-4 mb-16'>
                   {filteredToys.map(toy => (
                     <ToysCategoryCard key={toy._id} toy={toy} />
                   ))}

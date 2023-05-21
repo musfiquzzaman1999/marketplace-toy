@@ -27,7 +27,7 @@ const ToysCategoryCard = ({ toy }) => {
 
   return (
     <animated.div
-      className="card w-96 shadow-xl bg-gradient-to-t from-[rgb(146,218,255)] to-[rgb(146,218,255)]"
+      className=" card md:w-96 lg:w-96 w-80 sm:lg-6 shadow-xl bg-gradient-to-t from-[rgb(146,218,255)] to-[rgb(146,218,255)]"
       style={hoverAnimationProps}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
