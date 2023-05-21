@@ -15,7 +15,7 @@ const AuthProvider = ({children}) => {
     const [user,setUser]=useState(null);
 // chefs data fetch
     useEffect(() => {
-        fetch('https://toy-marketplace-server-neon.vercel.app/toys')
+        fetch('https://toy-marketplace-server-neon.vercel.app/toyslimit')
         .then(res => res.json())
         .then(data => {
             setToys(data);
