@@ -5,12 +5,16 @@ import useTitle from '../../hooks/useTitle';
 const AllToys = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [toysData, setToysData] = useState([]);
+  const [able,setAble]=useState(false)
   useTitle('All Toy');
 
   useEffect(() => {
     fetch('https://toy-marketplace-server-neon.vercel.app/toys/')
-      .then(response => response.json())
-      .then(data => setToysData(data))
+      .then(res => res.json())
+      .then(data => {
+        setToysData(data)
+       
+      })
       .catch(error => console.error(error));
   }, []);
 
@@ -21,6 +25,17 @@ const AllToys = () => {
   const filteredToys = toysData.filter(toy =>
     toy.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  const handelSeeMore=()=>{
+    fetch('https://toy-marketplace-server-neon.vercel.app/toyslimit')
+    .then(res=>res.json())
+    .then(data=>{
+      setToysData(data)
+      setAble(true)
+    })
+
+    
+  }
 
   return (
     <div className="px-4 py-8 mb-20">
@@ -67,7 +82,13 @@ const AllToys = () => {
             ))}
           </tbody>
         </table>
-      </div>
+        
+      </div> 
+   <div className='text-center mt-6'>
+   {
+      !able &&   <button className='btn' onClick={handelSeeMore}>see All</button>
+    }
+   </div>
     </div>
   );
 };
