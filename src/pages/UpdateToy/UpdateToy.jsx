@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContex } from '../provider/AuthProvider';
 
 const UpdateToy = () => {
     const{user}=useContext(AuthContex)
     const updateToys =useLoaderData();
+    const navigate=useNavigate();
     console.log(updateToys);
     const handleUpdateToy = (event) => {
         event.preventDefault();
@@ -52,6 +53,7 @@ const UpdateToy = () => {
       .then((result) => {
         if (result.modifiedCount > 0) {
          alert('update done')
+         navigate('/mytoys')
         }
         console.log(result);
       });

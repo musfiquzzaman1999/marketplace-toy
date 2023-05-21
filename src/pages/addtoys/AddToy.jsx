@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const AddToy = () => {
   const { user } = useContext(AuthContex);
   useTitle('Add Toy')
-
+const navagate = useNavigate();
   // const navigate = useNavigate()
 
   const [isFormValid, setIsFormValid] = useState(false);
@@ -50,6 +50,7 @@ const AddToy = () => {
         if(data.insertedId){
           alert('done');
           form.reset();
+          navagate('/mytoys')
           // navigate('/');
       }
       })
